@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="edit.css">
+    </head>
+    <body>
+        <div id="main">
+            <img id="meow1" src="meow1.gif">
+            <h1 id="question">Do you love me?</h1>
+            <button id="b1" class="button">Yes</button>
+            <button id="b2" class="button" onclick="play()">No</button>
+            <audio id="audio" src="omorino.mp3"></audio>
+            <img id="meow2" src="meow2.gif">
+            <script>
+                function play() {
+                  var audio = document.getElementById("audio");
+                  audio.play();
+                }
+            </script>
+            <script>
+                // select the button and the div
+                const button = document.getElementById('b1');
+                const div = document.getElementById('main');
+              
+                // define the function to change the HTML content
+                function changeContent() {
+                  div.innerHTML = '<img id="meow2" src="meow2.gif" style="width:700px;left:15%"><h1 id="answer" style="font-size:56px;">YAY :3</h1>';
+                }
+              
+                // add event listener to the button
+                button.addEventListener('click', changeContent);
+              </script>
+        </div>
+    </body>
+</html>
